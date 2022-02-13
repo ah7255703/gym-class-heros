@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Gym Class Heros</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="thumb">
+                <figure>
+                    <img src="" alt="">
+                </figure>
+
+
+                <div class="radio" id="radio">
+                    <div class="handle"></div>
+                    <div class="line"></div>
+                    <div class="right-speaker speaker">
+                    </div>
+                    <div class="left-speaker speaker">
+                    </div>
+                </div>
+                <div class="player-wrapper">
+                    <h4 class="text-white mt-1">Gym Class Heros</h4>
+                    <audio id="player" hidden preload="metadata" src="gym-class-heros-myheart-sterio.mp3"
+                        controls></audio>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            let player = document.getElementById('player');
+            let radio = document.getElementById('radio');
+            let speakers = document.getElementsByClassName('speaker');
+            radio.addEventListener('click', (event) => {
+                if (player.paused) {
+                    player.play()
+                } else {
+                    player.pause();
+                }
+
+            })
+        </script>
+
+    </body>
+
+</html>
